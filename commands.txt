@@ -1,0 +1,27 @@
+rm ev-sga.zip
+zip -r ev-sga.zip ev-sga/
+
+make studio-shell
+rm /edx/app/edxapp/ev-sga.zip
+rm -r /edx/app/edxapp/ev-sga/
+
+CTRL+D
+docker cp /home/santosh/coding/edx-sga/ev-sga.zip edx.devstack.studio:/edx/app/edxapp
+cd ..
+unzip ev-sga.zip
+sudo chown -R edxapp /edx/app/edxapp/ev-sga
+sudo chgrp -R edxapp /edx/app/edxapp/ev-sga
+
+sudo -H -u edxapp bash
+source /edx/app/edxapp/edxapp_env
+/edx/bin/pip.edxapp uninstall ev-sga
+/edx/bin/pip.edxapp install /edx/app/edxapp/ev-sga
+
+CTRL+D
+cd /edx/app/edxapp/edx-platform
+paver update_assets cms
+
+
+CTRL+D
+make studio-restart
+

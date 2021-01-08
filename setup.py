@@ -3,7 +3,7 @@
 import os
 from setuptools import setup, find_packages
 
-import edx_sga
+import ev_sga
 
 
 def package_data(pkg, root_list):
@@ -17,11 +17,11 @@ def package_data(pkg, root_list):
     return {pkg: data}
 
 setup(
-    name='edx-sga',
-    version=edx_sga.__version__,
-    description='edx-sga Staff Graded Assignment XBlock',
+    name='ev-sga',
+    version=ev_sga.__version__,
+    description='ev-sga Staff Graded Assignment XBlock',
     license='Affero GNU General Public License v3 (GPLv3)',
-    url="https://github.com/mitodl/edx-sga",
+    url="https://github.com/mitodl/ev-sga",
     author="MITx",
     zip_safe=False,
     packages=find_packages(),
@@ -32,8 +32,8 @@ setup(
     ],
     entry_points={
         'xblock.v1': [
-            'edx_sga = edx_sga.sga:StaffGradedAssignmentXBlock',
+            'ev_sga = ev_sga.sga:EvGradedAssignment',
         ]
     },
-    package_data=package_data("edx_sga", ["static", "templates"]),
+    package_data=package_data("ev_sga", ["static", "templates"]),
 )

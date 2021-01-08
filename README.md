@@ -38,21 +38,21 @@ the SGA XBlock in devstack.**
 1. **Add SGA to the Advanced Module List for your course in Studio**
    
     Open Advanced Settings for your course in Studio ("Settings" drop down in the top nav > "Advanced Settings"), 
-    and add `"edx_sga"` to the "Advanced Module List" value (i.e.: the value for "Advanced Module List" should 
-    be a JSON list, and that list should include `"edx_sga"`).
+    and add `"ev_sga"` to the "Advanced Module List" value (i.e.: the value for "Advanced Module List" should 
+    be a JSON list, and that list should include `"ev_sga"`).
 
 1. **If necessary, add SGA to installed Django apps**
 
-    **NOTE:** This is only needed if `edx_sga` is not somehow included in `INSTALLED_APPS` already. In
+    **NOTE:** This is only needed if `ev_sga` is not somehow included in `INSTALLED_APPS` already. In
     edx-platform, an app can make its way into `INSTALLED_APPS` in a few different ways, so the easiest thing
-    to do is grep your edx-platform branch for 'edx_sga' and see if it appears in `INSTALLED_APPS`/`OPTIONAL_APPS`/etc.
-    **All releases of edx-platform since Dogwood already include `edx_sga`, so this step is likely unnecessary.**
+    to do is grep your edx-platform branch for 'ev_sga' and see if it appears in `INSTALLED_APPS`/`OPTIONAL_APPS`/etc.
+    **All releases of edx-platform since Dogwood already include `ev_sga`, so this step is likely unnecessary.**
 
     If SGA is not already an installed app, add this as a top-level setting in `/edx/app/edxapp/lms.env.json` and 
     `/edx/app/edxapp/cms.env.json`:
 
     ```
-    "ADDL_INSTALLED_APPS": ["edx_sga"],
+    "ADDL_INSTALLED_APPS": ["ev_sga"],
     ```
 
     Also in `/edx/app/edxapp/cms.env.json`, add this to the `FEATURES` object:
@@ -68,7 +68,7 @@ the SGA XBlock in devstack.**
     
     1. Find any requirements files that list an `edx-sga` dependency and comment out those lines (there are many 
     requirements files in the `edx-platform` repo, and they're all `.txt` files, as is convention with pip). Note that
-    the app as it's recognized by Django is `edx_sga` with an underscore, but the repo is `edx-sga` with a dash.
+    the app as it's recognized by Django is `ev_sga` with an underscore, but the repo is `edx-sga` with a dash.
     
     1. Sync/mount your `edx-sga` repo directory to the Docker container or Vagrant VM (depending on which method you 
     use to run devstack on your machine).
@@ -110,11 +110,11 @@ Create a branch of edx-platform to commit a few minor changes:
     -e git+https://github.com/mitodl/edx-sga@release#egg=edx-sga
     ```
 
-1. **Add appropriate `edx_sga` settings**
+1. **Add appropriate `ev_sga` settings**
 
     - In both `cms/envs/common.py` and `lms/envs/common.py`, 
-    add `'edx_sga'` to `OPTIONAL_APPS`
-    - In `cms/envs/common.py`, add `'edx_sga'` to `ADVANCED_COMPONENT_TYPES`
+    add `'ev_sga'` to `OPTIONAL_APPS`
+    - In `cms/envs/common.py`, add `'ev_sga'` to `ADVANCED_COMPONENT_TYPES`
 
 1. **Configure file storage**
 
@@ -198,7 +198,7 @@ above. It is recommended to also include a url_name attribute. For example:
 
 ```xml
 <vertical display_name="Staff Graded Assignment">
-    <edx_sga url_name="sga_example" weight="10.0" display_name="SGA Example" points="100.0" showanswer="past_due" solution="solution text" />
+    <ev_sga url_name="sga_example" weight="10.0" display_name="SGA Example" points="100.0" showanswer="past_due" solution="solution text" />
 </vertical>
 ```
 You can specify the following values for the show answer attribute.
@@ -272,7 +272,7 @@ You can specify the following values for the show answer attribute.
 Assuming `edx-sga` is installed as above, integration tests can be run in devstack with this command:
 
 ```sh
-python manage.py lms --settings=test test edx_sga.tests.integration_tests
+python manage.py lms --settings=test test ev_sga.tests.integration_tests
 ```
 
 To run tests on your host machine (with a mocked edX platform):
@@ -287,6 +287,7 @@ tox -e py27-django111
 To get statement coverage (in devstack):
 
 ```sh
-coverage run --source edx_sga manage.py lms --settings=test test edx_sga.tests.integration_tests
+coverage run --source ev_sga manage.py lms --settings=test test ev_sga.tests.integration_tests
 coverage report -m
 ```
+# assignment-xblock

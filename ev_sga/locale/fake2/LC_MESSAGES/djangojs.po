@@ -1,0 +1,58 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-09-10 13:09+0430\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ev_sga/static/js/src/ev_sga.js
+msgid "Upload %(file_name)s"
+msgstr "Ʉdløɐd %(file_name)s"
+
+#: ev_sga/static/js/src/ev_sga.js
+msgid "Uploading..."
+msgstr "Ʉdløɐdᴉnƃ..."
+
+#: ev_sga/static/js/src/ev_sga.js
+msgid "The file you are trying to upload is too large."
+msgstr "Ŧɥǝ ɟᴉlǝ ʎøn ɐɹǝ ʇɹʎᴉnƃ ʇø ndløɐd ᴉs ʇøø lɐɹƃǝ."
+
+#: ev_sga/static/js/src/ev_sga.js
+msgid "There was an error uploading your file."
+msgstr "Ŧɥǝɹǝ ʍɐs ɐn ǝɹɹøɹ ndløɐdᴉnƃ ʎønɹ ɟᴉlǝ."
+
+#: ev_sga/static/js/src/ev_sga.js
+msgid "Uploading... %(percent)s %"
+msgstr "Ʉdløɐdᴉnƃ... %(percent)s %"
+
+#: ev_sga/static/js/src/ev_sga.js
+msgid "Grade must be a number."
+msgstr "Ǥɹɐdǝ ɯnsʇ bǝ ɐ nnɯbǝɹ."
+
+#: ev_sga/static/js/src/ev_sga.js
+msgid "Grade must be an integer."
+msgstr "Ǥɹɐdǝ ɯnsʇ bǝ ɐn ᴉnʇǝƃǝɹ."
+
+#: ev_sga/static/js/src/ev_sga.js
+msgid "Grade must be positive."
+msgstr "Ǥɹɐdǝ ɯnsʇ bǝ døsᴉʇᴉʌǝ."
+
+#: ev_sga/static/js/src/ev_sga.js
+msgid "Maximum score is %(max_score)s"
+msgstr "Mɐxᴉɯnɯ sɔøɹǝ ᴉs %(max_score)s"
+
+#: ev_sga/static/js/src/ev_sga.js
+msgid "No grade to remove."
+msgstr "Nø ƃɹɐdǝ ʇø ɹǝɯøʌǝ."

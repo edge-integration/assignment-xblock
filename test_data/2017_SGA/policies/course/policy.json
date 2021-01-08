@@ -1,7 +1,7 @@
 {
     "course/course": {
         "advanced_modules": [
-            "edx_sga", 
+            "ev_sga", 
             "annotatable"
         ], 
         "cert_html_view_enabled": true, 

@@ -1,0 +1,190 @@
+/* CSS for EvGradedAssignment */
+
+.ega-block .staff-modal {
+    position: fixed;
+    z-index:100;
+    display: none;
+    width: 80%;
+    height: 75%;
+    overflow: hidden;
+    padding: 20px;
+    left: 10% !important; /* important is necessary to override modal JS styling */
+    margin-left: 0px !important; /* important is necessary to override modal JS styling */
+}
+
+.ega-block .staff-modal .inner-wrapper {
+    height: 100%;
+    overflow-y: scroll;
+    box-sizing: border-box;
+}
+
+.ega-block .staff-modal .inner-wrapper h2 {
+    margin: 10px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.ega-block .staff-modal .inner-wrapper table{
+    width: 100%;
+}
+
+.ega-block .staff-modal .not-finalized td {
+    background-color: #f1f1f1
+}
+
+.ega-block table.gridtable {
+    font-family: verdana,arial,sans-serif;
+    font-size:11px;
+    color:#333333;
+    border-width: 1px;
+    border-color: #666666;
+    border-collapse: collapse;
+}
+
+.ega-block table.gridtable th {
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #666666;
+    background-color: #dedede;
+}
+
+.ega-block table.gridtable td {
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #666666;
+    background-color: #ffffff;
+}
+
+.ega-block .upload {
+    position: relative;
+    height: 40px;
+}
+
+/* Default edx button style */
+.ega-block .upload label, .ega-block a.button {
+    border: 1px solid #d2c9c9;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 0 0 #fff;
+    color: #333;
+    display: inline-block;
+    font-weight: bold;
+    background-color: #f1f1f1;
+    background-image: -webkit-linear-gradient(#f1f1f1, #d9d1d1);
+    background-image: linear-gradient(#f1f1f1, #d9d1d1);
+    padding: 7px 18px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #fcfbfb;
+    background-clip: padding-box;
+    white-space: nowrap;
+    font-size: 0.8125em;
+}
+
+.ega-block a.button {
+    -moz-user-select: none;
+    box-sizing: border-box;
+    line-height: normal;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    margin-top: 1px;
+    cursor: pointer;
+}
+
+.ega-block .upload .fileupload {
+    display: none;
+}
+
+.ega-block td .upload label {
+    cursor: pointer;
+    line-height: normal;
+}
+
+.ega-block .error {
+    color: red;
+}
+
+.ega-block .display_name {
+    color: inherit;
+}
+
+.ega-block table.tablesorter thead tr .header {
+ 	cursor: pointer;
+}
+
+.ega-block table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+    background-color: #8dbdd8;
+}
+
+.ega-block .submissions-download-link >  p {
+  color: #0075b4;
+}
+
+.ega-block .solution::before {
+  content: "Solution: ";
+  font-weight: bold;
+}
+
+.staff-modal .task-message {
+  font-family:'Open Sans', sans-serif;
+  color: #4c4c4c;
+  padding-bottom: 5px;
+}
+
+.staff-modal .ready-msg {
+  color: darkgreen;
+}
+
+.staff-modal .preparing-msg {
+  color: red;
+}
+
+.ega-block .imp-text{
+    background: #ffb7b7;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.ega-block p{
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.ega-block #assignment-answer{
+    width: 100%;
+    max-width: 100%;
+    height: 4rem;
+}
+
+.ega-block .answer label{
+    font-size: small;
+}
+
+.ega-block #enter-grade-form div{
+    margin-bottom: 10px;
+}
+
+.ega-block #enter-grade-form #grade-input{
+    width: 100%;
+}
+
+.ega-block #enter-grade-form #comment-input{
+    width: 100%;
+}
+
+.ega-block .grade-modal{
+    padding: 20px;
+    background: #cbc8c8;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+    height: auto;
+}
+
+.ega-block .grade-modal .inner-wrapper h2{
+    margin: 10px;
+    text-align: center;
+    font-weight: 600;
+}
+.ega-block .grade-modal .button-div{
+    float: right;
+}

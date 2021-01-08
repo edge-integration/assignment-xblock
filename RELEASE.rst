@@ -117,7 +117,7 @@ Version 0.6.0 (Released November 16, 2016)
 - Allow not only english language file uploads
 - Implement support for multiply SGA elements at one vertical
 - fixed all posible pylint issues
-- fix jshint indentified issue for all studio and edx_sga file
+- fix jshint indentified issue for all studio and ev_sga file
 - merge base and fixed error message display under button error and loaded max file size from settings
 - Added log.info in all locations where sga.py is chaning state of StudentModule
 - added display name on sga lms and grade submission dialog

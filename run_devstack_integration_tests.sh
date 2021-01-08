@@ -23,6 +23,6 @@ cp /edx/app/edxapp/edx-platform/setup.cfg .
 rm ./pytest.ini
 mkdir test_root  # for edx
 
-pytest ./edx_sga/tests/integration_tests.py --cov .
+pytest ./ev_sga/tests/integration_tests.py --cov .
 coverage xml
 codecov
