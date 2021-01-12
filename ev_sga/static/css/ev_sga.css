@@ -177,7 +177,10 @@
     padding: 20px;
     background: #cbc8c8;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
-    height: auto;
+    height: fit-content !important;
+    width: 80%;
+    left: 10% !important; /* important is necessary to override modal JS styling */
+    margin-left: 0px !important; /* important is necessary to override modal JS styling */
 }
 
 .ega-block .grade-modal .inner-wrapper h2{

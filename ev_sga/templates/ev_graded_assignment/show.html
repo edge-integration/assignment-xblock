@@ -36,8 +36,6 @@
                 <p class='imp-text'>
                     <% if (score) { %>
                         {% blocktrans %}Your score is <%= score %> / <%= max_score %>{% endblocktrans %}<br/>
-                    <% } else if (answered) { %>
-                        {% trans "This assignment has not yet been graded." %}
                     <% } %>
                 </p>
                 <p>
@@ -69,11 +67,10 @@
                 <tr>
                     <th class="header">{% trans "Username" %} <i class="icon fa fa-sort"/></th>
                     <th class="header">{% trans "Name" %} <i class="icon fa fa-sort"/></th>
-                    <th class="header">{% trans "Answer" %} <i class="icon fa fa-sort"/></th>
+                    <th class="header" style="width: 30%">{% trans "Answer" %} <i class="icon fa fa-sort"/></th>
                     <th class="header">{% trans "Uploaded" %} <i class="icon fa fa-sort"/></th>
-                    <th class="header">{% trans "Submitted" %} <i class="icon fa fa-sort"/></th>
                     <th class="header">{% trans "Grade" %} <i class="icon fa fa-sort"/></th>
-                    <th class="header">{% trans "Instructor's comments" %} <i class="icon fa fa-sort"/></th>
+                    <th class="header" style="width: 20%">{% trans "Instructor's comments" %} <i class="icon fa fa-sort"/></th>
                     <th class="header" colspan="2">{% trans "Actions" %}</th>
                 </tr>
             </thead>
@@ -85,13 +82,6 @@
             <td><%= assignment.fullname %></td>
             <td><%= assignment.answer %></td>
             <td><%= assignment.timestamp %></td>
-            <td>
-                <% if (assignment.finalized) { %>
-                {% trans "Yes" %}
-                <% } else { %>
-                {% trans "No" %}
-                <% } %>
-            </td>
             <td>
                 <% if (assignment.score !== null) { %>
                 <%= assignment.score %> /
