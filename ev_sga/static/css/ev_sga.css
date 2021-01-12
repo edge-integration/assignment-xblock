@@ -8,6 +8,7 @@
     height: 75%;
     overflow: hidden;
     padding: 20px;
+    background: #cbc8c8;
     left: 10% !important; /* important is necessary to override modal JS styling */
     margin-left: 0px !important; /* important is necessary to override modal JS styling */
 }
@@ -190,4 +191,15 @@
 }
 .ega-block .grade-modal .button-div{
     float: right;
+}
+
+.ega-block .ega-button{
+    padding: 5px;
+    border: 1px solid #c34577 !important;
+    border-radius: 0px;
+    color: #cb518b !important;
+    bottom: 0;
+    background: white !important;
+    margin-bottom: 5px !important;
+    margin-top: 5px !important;
 }
