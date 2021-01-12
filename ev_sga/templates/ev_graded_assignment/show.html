@@ -21,7 +21,7 @@
                         {% trans "Enter your answer below" %}
                     </label>
                     <textarea maxlength="100000" id="assignment-answer" name="assignment"></textarea>
-                    <a class="button submit-answer-button ega-button">Submit</a>
+                    <a class="button submit-answer-button ega-fill-button">Submit</a>
                 </p>
             </form>
             
@@ -111,7 +111,7 @@
     
 
     <div aria-hidden="true" class="wrap-instructor-info">
-        <a class="instructor-info-action ega-button" id="grade-submissions-button" href="#grade-{{ id }}">
+        <a class="instructor-info-action" id="grade-submissions-button" href="#grade-{{ id }}">
             {% trans "Grade Submissions" %}
         </a>
     </div>
@@ -167,7 +167,7 @@
                 <span class="error"></span></div>
                 <div>{% trans "Comment:" %} <textarea id="comment-input" name="comment" rows="4"></textarea></div>
                 <div class="button-div">
-                    <button type="submit" class="ega-button">{% trans "Submit" %}</button>
+                    <button type="submit" class="ega-fill-button">{% trans "Submit" %}</button>
                     <button type="button" class="ega-button" id="enter-grade-cancel">
                         {% trans "Cancel" %}
                     </button>

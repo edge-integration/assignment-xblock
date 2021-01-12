@@ -194,7 +194,7 @@
 }
 
 .ega-block .ega-button{
-    padding: 5px;
+    padding: 5px 10px;
     border: 1px solid #c34577 !important;
     border-radius: 0px;
     color: #cb518b !important;
@@ -202,4 +202,19 @@
     background: white !important;
     margin-bottom: 5px !important;
     margin-top: 5px !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+
+.ega-block .ega-fill-button{
+    padding: 5px 10px;
+    border: 1px solid #c21f77 !important;
+    border-radius: 0px;
+    color: #fff !important;
+    bottom: 0;
+    background: #c21f77 !important;
+    margin-bottom: 5px !important;
+    margin-top: 5px !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
 }
