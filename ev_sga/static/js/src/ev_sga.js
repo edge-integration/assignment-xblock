@@ -183,23 +183,6 @@ function EvGradedAssignment(runtime, element) {
             });
         }
 
-        function updateChangeEvent(fileUploadObj) {
-            fileUploadObj.off('change').on('change', function (e) {
-                var that = $(this).data('blueimpFileupload'),
-                    data = {
-                        fileInput: $(e.target),
-                        form: $(e.target.form)
-                    };
-
-                that._getFileInputFiles(data.fileInput).always(function (files) {
-                    data.files = files;
-                    if (that.options.replaceFileInput) {
-                        that._replaceFileInput(data.fileInput);
-                    }
-                    that._onAdd(e, data);
-                });
-            });
-        }
 
         $(function($) { // onLoad
             var block = $(element).find('.ega-block');
@@ -328,8 +311,6 @@ function EvGradedAssignment(runtime, element) {
          * jquery.ajaxfileupload instead.  But our XBlock uses
          * jquery.fileupload.
          */
-        loadjs('/static/js/vendor/jQuery-File-Upload/js/jquery.iframe-transport.js');
-        loadjs('/static/js/vendor/jQuery-File-Upload/js/jquery.fileupload.js');
         xblock($, _);
     } else {
         /**
