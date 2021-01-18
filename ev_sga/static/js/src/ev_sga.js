@@ -64,7 +64,7 @@ function EvGradedAssignment(runtime, element) {
 
             // Set up grade entry modal
             $(element).find('.enter-grade-button')
-                .leanModal({closeButton: '#enter-grade-cancel'})
+                .leanModal()
                 .on('click', handleGradeEntry);
 
             $.tablesorter.addParser({
@@ -162,6 +162,10 @@ function EvGradedAssignment(runtime, element) {
                 }
             });
             form.find('#enter-grade-cancel').on('click', function() {
+                console.log("coming here");
+                gradeFormError('');
+                $('.grade-modal').hide();
+                $("#lean_overlay").show();
                 /* We're kind of stretching the limits of leanModal, here,
                  * by nesting modals one on top of the other.  One side effect
                  * is that when the enter grade modal is closed, it hides
@@ -176,10 +180,10 @@ function EvGradedAssignment(runtime, element) {
                  *
                  * See: https://github.com/mitodl/edx-sga/issues/13
                  */
-                setTimeout(function() {
-                    $('#grade-submissions-button').click();
-                    gradeFormError('');
-                }, 225);
+            //     setTimeout(function() {
+            //         $('#grade-submissions-button').click();
+            //         gradeFormError('');
+            //     }, 225);
             });
         }
 
