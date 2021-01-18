@@ -128,7 +128,7 @@ function EvGradedAssignment(runtime, element) {
             form.find('#module_id-input').val(row.data('module_id'));
             form.find('#submission_id-input').val(row.data('submission_id'));
             form.find('#grade-input').val(row.data('score'));
-            form.find('#comment-input').text(row.data('comment'));
+            form.find('#comment-input').val(row.data('comment'));
             form.off('submit').on('submit', function(event) {
                 var max_score = row.parents('#grade-info').data('max_score');
                 var score = Number(form.find('#grade-input').val());
